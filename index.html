@@ -1,771 +1,869 @@
 <!doctype html>
 <html lang="pt-BR" data-lang="pt">
+
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Daniel Wolker — Currículo</title>
-  <meta name="description" content="Currículo online de Daniel Wolker — Desenvolvedor Full Stack | Web | Mobile (React Native)" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Daniel Wolker — Currículo</title>
+    <meta name="description"
+        content="Currículo online de Daniel Wolker — Desenvolvedor Full Stack | Web | Mobile (React Native)" />
 
-  <style>
-    :root{
-      --bg: #0b0f17;
-      --panel: rgba(255,255,255,.06);
-      --panel-2: rgba(255,255,255,.09);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.70);
-      --faint: rgba(255,255,255,.50);
-      --line: rgba(255,255,255,.14);
-      --accent: #7c5cff;
-      --accent-2: #34d399;
-      --shadow: 0 18px 60px rgba(0,0,0,.45);
-      --radius: 18px;
-      --radius-sm: 12px;
-      --max: 980px;
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-    }
+    <style>
+        :root {
+            --bg: #0b0f17;
+            --panel: rgba(255, 255, 255, .06);
+            --panel-2: rgba(255, 255, 255, .09);
+            --text: rgba(255, 255, 255, .92);
+            --muted: rgba(255, 255, 255, .70);
+            --faint: rgba(255, 255, 255, .50);
+            --line: rgba(255, 255, 255, .14);
+            --accent: #7c5cff;
+            --accent-2: #34d399;
+            --shadow: 0 18px 60px rgba(0, 0, 0, .45);
+            --radius: 18px;
+            --radius-sm: 12px;
+            --max: 980px;
+            --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+        }
 
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body{
-      margin: 0;
-      font-family: var(--sans);
-      background:
-        radial-gradient(1200px 700px at 10% 10%, rgba(124,92,255,.30), transparent 55%),
-        radial-gradient(900px 600px at 90% 20%, rgba(52,211,153,.18), transparent 50%),
-        radial-gradient(800px 600px at 50% 100%, rgba(124,92,255,.12), transparent 55%),
-        var(--bg);
-      color: var(--text);
-      line-height: 1.55;
-    }
+        * {
+            box-sizing: border-box;
+        }
 
-    a { color: inherit; text-decoration: none; }
-    a:hover { text-decoration: underline; text-underline-offset: 3px; }
+        html,
+        body {
+            height: 100%;
+        }
 
-    .wrap{
-      max-width: var(--max);
-      margin: 0 auto;
-      padding: 42px 18px 64px;
-    }
+        body {
+            margin: 0;
+            font-family: var(--sans);
 
-    .topbar{
-      display: flex;
-      gap: 12px;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 14px;
-      color: var(--muted);
-      font-size: 14px;
-      flex-wrap: wrap;
-    }
+            /* Fundo profissional e moderno */
+            background:
+                radial-gradient(1200px 600px at 50% -200px,
+                    rgba(124, 92, 255, 0.10),
+                    transparent 60%),
+                linear-gradient(180deg,
+                    #0e1117 0%,
+                    #0b0f17 40%,
+                    #090c13 100%);
 
-    .pill{
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      padding: 8px 12px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.05);
-      border: 1px solid var(--line);
-      backdrop-filter: blur(10px);
-    }
+            background-attachment: fixed;
+            color: var(--text);
+            line-height: 1.55;
+        }
 
-    .btns{
-      display:flex;
-      gap:10px;
-      align-items:center;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
 
-    .btn{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 14px;
-      border-radius: 12px;
-      border: 1px solid var(--line);
-      background: rgba(255,255,255,.05);
-      cursor: pointer;
-      color: var(--text);
-      font-weight: 700;
-      transition: transform .06s ease, background .15s ease, border-color .15s ease;
-      user-select:none;
-    }
-    .btn:hover{ background: rgba(255,255,255,.08); text-decoration: none; }
-    .btn:active{ transform: translateY(1px); }
+        a:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
 
-    .btn.primary{
-      border-color: rgba(124,92,255,.55);
-      background: rgba(124,92,255,.14);
-    }
-    .btn.primary:hover{
-      background: rgba(124,92,255,.18);
-    }
+        .wrap {
+            max-width: var(--max);
+            margin: 0 auto;
+            padding: 42px 18px 64px;
+        }
 
-    .header{
-      background: linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 26px 24px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(12px);
-    }
+        .topbar {
+            display: flex;
+            gap: 12px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+            color: var(--muted);
+            font-size: 14px;
+            flex-wrap: wrap;
+        }
 
-    .hgrid{
-      display: grid;
-      grid-template-columns: 1.2fr .8fr;
-      gap: 18px 22px;
-      align-items: start;
-    }
+        .pill {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            padding: 8px 12px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid var(--line);
+            backdrop-filter: blur(10px);
+        }
 
-    @media (max-width: 860px){
-      .hgrid{ grid-template-columns: 1fr; }
-      .topbar{ justify-content: flex-start; }
-      .btns{ justify-content: flex-start; }
-    }
+        .btns {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+        }
 
-    h1{
-      margin: 0;
-      font-size: 34px;
-      letter-spacing: -0.4px;
-      line-height: 1.1;
-    }
-    .role{
-      margin-top: 8px;
-      color: var(--muted);
-      font-size: 15.5px;
-    }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 14px;
+            border-radius: 12px;
+            border: 1px solid var(--line);
+            background: rgba(255, 255, 255, .05);
+            cursor: pointer;
+            color: var(--text);
+            font-weight: 700;
+            transition: transform .06s ease, background .15s ease, border-color .15s ease;
+            user-select: none;
+        }
 
-    .contacts{
-      display: grid;
-      gap: 10px;
-      background: rgba(0,0,0,.18);
-      border: 1px solid rgba(255,255,255,.10);
-      border-radius: var(--radius-sm);
-      padding: 14px;
-    }
+        .btn:hover {
+            background: rgba(255, 255, 255, .08);
+            text-decoration: none;
+        }
 
-    .contact{
-      display: grid;
-      grid-template-columns: 110px 1fr;
-      gap: 8px;
-      align-items: baseline;
-      font-size: 14px;
-      color: var(--muted);
-    }
-    .contact b{
-      color: var(--faint);
-      font-weight: 600;
-      font-family: var(--mono);
-      font-size: 12.5px;
-      letter-spacing: .2px;
-      text-transform: uppercase;
-    }
+        .btn:active {
+            transform: translateY(1px);
+        }
 
-    .summary{
-      margin-top: 14px;
-      color: var(--muted);
-      font-size: 15px;
-    }
+        .btn.primary {
+            border-color: rgba(124, 92, 255, .55);
+            background: rgba(124, 92, 255, .14);
+        }
 
-    .grid{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-top: 18px;
-    }
-    @media (max-width: 860px){ .grid{ grid-template-columns: 1fr; } }
+        .btn.primary:hover {
+            background: rgba(124, 92, 255, .18);
+        }
 
-    .card{
-      background: rgba(255,255,255,.05);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 18px 18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.24);
-      backdrop-filter: blur(10px);
-    }
+        .header {
+            background: linear-gradient(180deg, rgba(255, 255, 255, .08), rgba(255, 255, 255, .04));
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 26px 24px;
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(12px);
+        }
 
-    .section-title{
-      display: flex;
-      gap: 10px;
-      align-items: center;
-      margin: 0 0 12px;
-      font-size: 16px;
-      letter-spacing: -0.2px;
-    }
+        .hgrid {
+            display: grid;
+            grid-template-columns: 1.2fr .8fr;
+            gap: 18px 22px;
+            align-items: start;
+        }
 
-    .dot{
-      width: 10px;
-      height: 10px;
-      border-radius: 999px;
-      background: var(--accent);
-      box-shadow: 0 0 0 4px rgba(124,92,255,.18);
-      flex: 0 0 auto;
-    }
+        @media (max-width: 860px) {
+            .hgrid {
+                grid-template-columns: 1fr;
+            }
 
-    .dot.green{
-      background: var(--accent-2);
-      box-shadow: 0 0 0 4px rgba(52,211,153,.16);
-    }
+            .topbar {
+                justify-content: flex-start;
+            }
 
-    .tags{
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
-    .tag{
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(255,255,255,.06);
-      border: 1px solid rgba(255,255,255,.12);
-      color: rgba(255,255,255,.82);
-      font-size: 13px;
-      white-space: nowrap;
-    }
+            .btns {
+                justify-content: flex-start;
+            }
+        }
 
-    .item{
-      padding: 14px 14px;
-      border-radius: 14px;
-      background: rgba(0,0,0,.14);
-      border: 1px solid rgba(255,255,255,.10);
-      margin-bottom: 10px;
-    }
-    .item:last-child{ margin-bottom: 0; }
+        h1 {
+            margin: 0;
+            font-size: 34px;
+            letter-spacing: -0.4px;
+            line-height: 1.1;
+        }
 
-    .item h3{
-      margin: 0;
-      font-size: 15.5px;
-      letter-spacing: -0.2px;
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: baseline;
-    }
-    .meta{
-      color: var(--muted);
-      font-size: 13.5px;
-      margin-top: 6px;
-    }
-    ul{
-      margin: 10px 0 0 18px;
-      color: var(--muted);
-    }
-    li{ margin: 6px 0; }
+        .role {
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 15.5px;
+        }
 
-    .proj h4{
-      margin: 0;
-      font-size: 15px;
-      letter-spacing: -0.2px;
-    }
-    .proj .link{
-      display: inline-flex;
-      gap: 8px;
-      align-items: center;
-      color: rgba(255,255,255,.88);
-      font-size: 13.5px;
-      margin-top: 6px;
-    }
-    .small{
-      color: var(--muted);
-      font-size: 13.5px;
-      margin-top: 6px;
-    }
+        .contacts {
+            display: grid;
+            gap: 10px;
+            background: rgba(0, 0, 0, .18);
+            border: 1px solid rgba(255, 255, 255, .10);
+            border-radius: var(--radius-sm);
+            padding: 14px;
+        }
 
-    footer{
-      margin-top: 18px;
-      color: rgba(255,255,255,.55);
-      font-size: 12.5px;
-      text-align: center;
-    }
+        .contact {
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            gap: 8px;
+            align-items: baseline;
+            font-size: 14px;
+            color: var(--muted);
+        }
 
-    .kbd{
-      font-family: var(--mono);
-      font-size: 12px;
-      padding: 3px 7px;
-      border-radius: 8px;
-      border: 1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color: rgba(255,255,255,.80);
-    }
+        .contact b {
+            color: var(--faint);
+            font-weight: 600;
+            font-family: var(--mono);
+            font-size: 12.5px;
+            letter-spacing: .2px;
+            text-transform: uppercase;
+        }
 
-    @media print{
-      body{ background: white; color: #111; }
-      .topbar{ display:none; }
-      .header, .card, .item { box-shadow:none; background:white; border: 1px solid #ddd; }
-      a{ text-decoration:none; color:#111; }
-      .dot{ box-shadow:none; }
-    }
-  </style>
+        .summary {
+            margin-top: 14px;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+            margin-top: 18px;
+        }
+
+        @media (max-width: 860px) {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .card {
+            background: rgba(255, 255, 255, .05);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            padding: 18px 18px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, .24);
+            backdrop-filter: blur(10px);
+        }
+
+        .section-title {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin: 0 0 12px;
+            font-size: 16px;
+            letter-spacing: -0.2px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 999px;
+            background: var(--accent);
+            box-shadow: 0 0 0 4px rgba(124, 92, 255, .18);
+            flex: 0 0 auto;
+        }
+
+        .dot.green {
+            background: var(--accent-2);
+            box-shadow: 0 0 0 4px rgba(52, 211, 153, .16);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tag {
+            padding: 7px 10px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .06);
+            border: 1px solid rgba(255, 255, 255, .12);
+            color: rgba(255, 255, 255, .82);
+            font-size: 13px;
+            white-space: nowrap;
+        }
+
+        .item {
+            padding: 14px 14px;
+            border-radius: 14px;
+            background: rgba(0, 0, 0, .14);
+            border: 1px solid rgba(255, 255, 255, .10);
+            margin-bottom: 10px;
+        }
+
+        .item:last-child {
+            margin-bottom: 0;
+        }
+
+        .item h3 {
+            margin: 0;
+            font-size: 15.5px;
+            letter-spacing: -0.2px;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: baseline;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: 13.5px;
+            margin-top: 6px;
+        }
+
+        ul {
+            margin: 10px 0 0 18px;
+            color: var(--muted);
+        }
+
+        li {
+            margin: 6px 0;
+        }
+
+        .proj h4 {
+            margin: 0;
+            font-size: 15px;
+            letter-spacing: -0.2px;
+        }
+
+        .proj .link {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            color: rgba(255, 255, 255, .88);
+            font-size: 13.5px;
+            margin-top: 6px;
+        }
+
+        .small {
+            color: var(--muted);
+            font-size: 13.5px;
+            margin-top: 6px;
+        }
+
+        footer {
+            margin-top: 18px;
+            color: rgba(255, 255, 255, .55);
+            font-size: 12.5px;
+            text-align: center;
+        }
+
+        .kbd {
+            font-family: var(--mono);
+            font-size: 12px;
+            padding: 3px 7px;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, .14);
+            background: rgba(255, 255, 255, .06);
+            color: rgba(255, 255, 255, .80);
+        }
+
+        @media print {
+            body {
+                background: white;
+                color: #111;
+            }
+
+            .topbar {
+                display: none;
+            }
+
+            .header,
+            .card,
+            .item {
+                box-shadow: none;
+                background: white;
+                border: 1px solid #ddd;
+            }
+
+            a {
+                text-decoration: none;
+                color: #111;
+            }
+
+            .dot {
+                box-shadow: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <main class="wrap">
-    <div class="topbar">
-      <span class="pill" id="pillText">
-        Versão online • <span class="kbd">Ctrl</span> + <span class="kbd">P</span> para salvar em PDF
-      </span>
+    <main class="wrap">
+        <div class="topbar">
+            <span class="pill" id="pillText">
+                Versão online • <span class="kbd">Ctrl</span> + <span class="kbd">P</span> para salvar em PDF
+            </span>
 
-      <div class="btns">
-        <button class="btn primary" id="langBtn" type="button">English</button>
-        <button class="btn" type="button" id="printBtn">Imprimir / PDF</button>
-      </div>
-    </div>
-
-    <section class="header">
-      <div class="hgrid">
-        <div>
-          <h1>Daniel Wolker</h1>
-          <div class="role" id="roleText">Desenvolvedor Full Stack | Web | Mobile (React Native)</div>
-
-          <p class="summary" id="summaryText">
-            Desenvolvedor Full Stack com experiência em aplicações web e mobile, atuando no ciclo completo: modelagem de banco de dados,
-            backend, APIs e interfaces. Experiência em marketplaces, SaaS, sistemas educacionais e plataformas de cashback.
-            Forte em RESTful APIs, arquitetura modular, arquitetura escalável e RBAC (controle de acesso por perfil).
-            Perfil orientado a produto, performance e usabilidade. Uso de ferramentas de IA para produtividade em debugging,
-            code assistance e prototipação, mantendo domínio técnico das soluções.
-          </p>
+            <div class="btns">
+                <button class="btn primary" id="langBtn" type="button">English</button>
+                <button class="btn" type="button" id="printBtn">Imprimir / PDF</button>
+            </div>
         </div>
 
-        <aside class="contacts">
-          <div class="contact"><b id="lblEmail">Email</b><span><a href="mailto:danewolker@gmail.com">danewolker@gmail.com</a></span></div>
-          <div class="contact"><b id="lblPhone">Telefone</b><span><a href="tel:+5551983229979">+55 (51) 98322-9979</a></span></div>
-          <div class="contact"><b id="lblLinkedIn">LinkedIn</b><span><a href="https://www.linkedin.com/in/daniel-iglessias-b1416020b" target="_blank" rel="noreferrer">linkedin.com/in/daniel-iglessias-b1416020b</a></span></div>
-          <div class="contact"><b id="lblGitHub">GitHub</b><span><a href="https://github.com/danwolker" target="_blank" rel="noreferrer">github.com/danwolker</a></span></div>
-        </aside>
-      </div>
-    </section>
+        <section class="header">
+            <div class="hgrid">
+                <div>
+                    <h1>Daniel Wolker</h1>
+                    <div class="role" id="roleText">Desenvolvedor Full Stack | Web | Mobile (React Native)</div>
 
-    <section class="grid">
-      <div class="card">
-        <h2 class="section-title"><span class="dot"></span><span id="coreSkillsTitle">Core Skills</span></h2>
-        <div class="tags">
-          <span class="tag">React Native</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">PHP</span>
-          <span class="tag">Laravel</span>
-          <span class="tag">MySQL</span>
-          <span class="tag">REST APIs</span>
-          <span class="tag">Git</span>
-          <span class="tag">API Development</span>
-          <span class="tag">Cross-platform Apps</span>
-        </div>
-      </div>
+                    <p class="summary" id="summaryText">
+                        Desenvolvedor Full Stack com experiência em aplicações web e mobile, atuando no ciclo completo:
+                        modelagem de banco de dados,
+                        backend, APIs e interfaces. Experiência em marketplaces, SaaS, sistemas educacionais e
+                        plataformas de cashback.
+                        Forte em RESTful APIs, arquitetura modular, arquitetura escalável e RBAC (controle de acesso por
+                        perfil).
+                        Perfil orientado a produto, performance e usabilidade. Uso de ferramentas de IA para
+                        produtividade em debugging,
+                        code assistance e prototipação, mantendo domínio técnico das soluções.
+                    </p>
+                </div>
 
-      <div class="card">
-        <h2 class="section-title"><span class="dot green"></span><span id="techTitle">Tecnologias</span></h2>
-        <div class="small" id="techText">
-          <b>Frontend / Mobile:</b> React Native • Expo • JavaScript (ES6+) • TypeScript • Tailwind CSS • HTML • CSS • jQuery<br/>
-          <b>Backend:</b> PHP • Laravel • RESTful APIs • Desenvolvimento de APIs • Regras de negócio<br/>
-          <b>Banco de Dados:</b> MySQL • Modelagem relacional<br/>
-          <b>Ferramentas:</b> Git • GitLab • Code review • Debugging • Deploy
-        </div>
-      </div>
-    </section>
+                <aside class="contacts">
+                    <div class="contact"><b id="lblEmail">Email</b><span><a
+                                href="mailto:danewolker@gmail.com">danewolker@gmail.com</a></span></div>
+                    <div class="contact"><b id="lblPhone">Telefone</b><span><a href="tel:+5551983229979">+55 (51)
+                                98322-9979</a></span></div>
+                    <div class="contact"><b id="lblLinkedIn">LinkedIn</b><span><a
+                                href="https://www.linkedin.com/in/daniel-iglessias-b1416020b" target="_blank"
+                                rel="noreferrer">linkedin.com/in/daniel-iglessias-b1416020b</a></span></div>
+                    <div class="contact"><b id="lblGitHub">GitHub</b><span><a href="https://github.com/danwolker"
+                                target="_blank" rel="noreferrer">github.com/danwolker</a></span></div>
+                </aside>
+            </div>
+        </section>
 
-    <section class="card" style="margin-top:14px;">
-      <h2 class="section-title"><span class="dot"></span><span id="fullStackTitle">Competências Full Stack</span></h2>
-      <div class="tags" id="fullStackTags">
-        <span class="tag">Full-stack development</span>
-        <span class="tag">Cross-platform development</span>
-        <span class="tag">API integration</span>
-        <span class="tag">RBAC</span>
-        <span class="tag">Geolocation</span>
-        <span class="tag">Real-time features</span>
-        <span class="tag">Real-time chat</span>
-        <span class="tag">PDF generation</span>
-        <span class="tag">Performance optimization</span>
-        <span class="tag">Arquitetura modular</span>
-      </div>
-    </section>
+        <section class="grid">
+            <div class="card">
+                <h2 class="section-title"><span class="dot"></span><span id="coreSkillsTitle">Core Skills</span></h2>
+                <div class="tags">
+                    <span class="tag">React Native</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">Laravel</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">REST APIs</span>
+                    <span class="tag">Git</span>
+                    <span class="tag">API Development</span>
+                    <span class="tag">Cross-platform Apps</span>
+                </div>
+            </div>
 
-    <section class="card" style="margin-top:14px;">
-      <h2 class="section-title"><span class="dot green"></span><span id="expTitle">Experiência</span></h2>
+            <div class="card">
+                <h2 class="section-title"><span class="dot green"></span><span id="techTitle">Tecnologias</span></h2>
+                <div class="small" id="techText">
+                    <b>Frontend / Mobile:</b> React Native • Expo • JavaScript (ES6+) • TypeScript • Tailwind CSS • HTML
+                    • CSS • jQuery<br />
+                    <b>Backend:</b> PHP • Laravel • RESTful APIs • Desenvolvimento de APIs • Regras de negócio<br />
+                    <b>Banco de Dados:</b> MySQL • Modelagem relacional<br />
+                    <b>Ferramentas:</b> Git • GitLab • Code review • Debugging • Deploy
+                </div>
+            </div>
+        </section>
 
-      <div class="item">
-        <h3>
-          Tabinfo — <span id="tabinfoRole">Desenvolvedor Full Stack</span>
-          <span class="meta">| 05/2025 – <span id="presentText">Atual</span></span>
-        </h3>
-        <div class="meta" id="tabinfoMeta">
-          Desenvolvimento de soluções web e mobile para múltiplos clientes e segmentos (educação, RH, marketplaces e e-commerce).
-        </div>
-        <ul id="tabinfoBullets">
-          <li>Backend em PHP + MySQL e desenvolvimento de APIs REST.</li>
-          <li>Apps em React Native + Expo com foco em usabilidade e estabilidade.</li>
-          <li>Implementação de regras de negócio customizadas e RBAC (controle de acesso por funções).</li>
-          <li>Code review e mentoria técnica para outros desenvolvedores.</li>
-          <li>Manutenção e evolução de sistemas em produção com foco em escalabilidade e performance.</li>
-        </ul>
-      </div>
+        <section class="card" style="margin-top:14px;">
+            <h2 class="section-title"><span class="dot"></span><span id="fullStackTitle">Competências Full Stack</span>
+            </h2>
+            <div class="tags" id="fullStackTags">
+                <span class="tag">Full-stack development</span>
+                <span class="tag">Cross-platform development</span>
+                <span class="tag">API integration</span>
+                <span class="tag">RBAC</span>
+                <span class="tag">Geolocation</span>
+                <span class="tag">Real-time features</span>
+                <span class="tag">Real-time chat</span>
+                <span class="tag">PDF generation</span>
+                <span class="tag">Performance optimization</span>
+                <span class="tag">Arquitetura modular</span>
+            </div>
+        </section>
 
-      <div class="item">
-        <h3>
-          BECA (LegalTech) — <span id="becaRole">Desenvolvedor Frontend/Mobile</span>
-          <span class="meta">| 06/2024 – 04/2025</span>
-        </h3>
-        <ul id="becaBullets">
-          <li>Desenvolvimento mobile em React Native.</li>
-          <li>Consumo de APIs REST e integração com fluxos do app.</li>
-          <li>Melhorias de responsividade e componentização.</li>
-          <li>Correções de bugs e melhorias de estabilidade do aplicativo.</li>
-        </ul>
-      </div>
-    </section>
+        <section class="card" style="margin-top:14px;">
+            <h2 class="section-title"><span class="dot green"></span><span id="expTitle">Experiência</span></h2>
 
-    <section class="card" style="margin-top:14px;">
-      <h2 class="section-title"><span class="dot"></span><span id="projectsTitle">Projetos Relevantes</span></h2>
+            <div class="item">
+                <h3>
+                    Tabinfo — <span id="tabinfoRole">Desenvolvedor Full Stack</span>
+                    <span class="meta">| 05/2025 – <span id="presentText">Atual</span></span>
+                </h3>
+                <div class="meta" id="tabinfoMeta">
+                    Desenvolvimento de soluções web e mobile para múltiplos clientes e segmentos (educação, RH,
+                    marketplaces e e-commerce).
+                </div>
+                <ul id="tabinfoBullets">
+                    <li>Backend em PHP + MySQL e desenvolvimento de APIs REST.</li>
+                    <li>Apps em React Native + Expo com foco em usabilidade e estabilidade.</li>
+                    <li>Implementação de regras de negócio customizadas e RBAC (controle de acesso por funções).</li>
+                    <li>Code review e mentoria técnica para outros desenvolvedores.</li>
+                    <li>Manutenção e evolução de sistemas em produção com foco em escalabilidade e performance.</li>
+                </ul>
+            </div>
 
-      <div class="item proj">
-        <h4>BridgeIn — <span id="bridgeinTitle">Marketplace de Serviços (produto internacional para o mercado canadense)</span></h4>
-        <div class="small" id="bridgeinDesc">App por assinatura publicado em stores. React Native + Expo + Tailwind + PHP backend.</div>
-        <ul id="bridgeinBullets">
-          <li>Geolocalização e chat em tempo real com Socket.io.</li>
-          <li>Sistema de vagas com filtros e categorias.</li>
-          <li>Timesheet com geração de PDF para controle de tarefas.</li>
-          <li>Painel administrativo web e arquitetura preparada para escala.</li>
-        </ul>
-      </div>
+            <div class="item">
+                <h3>
+                    BECA (LegalTech) — <span id="becaRole">Desenvolvedor Frontend/Mobile</span>
+                    <span class="meta">| 06/2024 – 04/2025</span>
+                </h3>
+                <ul id="becaBullets">
+                    <li>Desenvolvimento mobile em React Native.</li>
+                    <li>Consumo de APIs REST e integração com fluxos do app.</li>
+                    <li>Melhorias de responsividade e componentização.</li>
+                    <li>Correções de bugs e melhorias de estabilidade do aplicativo.</li>
+                </ul>
+            </div>
+        </section>
 
-      <div class="item proj">
-        <h4><span id="incluiaTitle">Sistema Educacional Inclusivo — Incluia</span></h4>
-        <a class="link" href="https://homolog.incluia.com.br" target="_blank" rel="noreferrer">https://homolog.incluia.com.br</a>
-        <ul id="incluiaBullets">
-          <li>Backend completo em PHP + MySQL e modelagem relacional do zero.</li>
-          <li>Gestão documental para alunos com necessidades especiais.</li>
-          <li>Controle de acesso por perfil e uso em ambiente educacional real.</li>
-          <li>Arquitetura pensada para implantação em múltiplas instituições.</li>
-        </ul>
-      </div>
+        <section class="card" style="margin-top:14px;">
+            <h2 class="section-title"><span class="dot"></span><span id="projectsTitle">Projetos Relevantes</span></h2>
 
-      <div class="item proj">
-        <h4><span id="cashbackTitle">Plataforma de Cashback — Grupo Novo BH</span></h4>
-        <a class="link" href="https://homolog.gruponovobh.com.br" target="_blank" rel="noreferrer">https://homolog.gruponovobh.com.br</a>
-        <ul id="cashbackBullets">
-          <li>Backend PHP e app em React Native.</li>
-          <li>Pontuação em tempo real e regras de metas/condições por estabelecimento.</li>
-          <li>Estrutura preparada para campanhas simultâneas em múltiplos parceiros.</li>
-        </ul>
-      </div>
+            <div class="item proj">
+                <h4>BridgeIn — <span id="bridgeinTitle">Marketplace de Serviços (produto internacional para o mercado
+                        canadense)</span></h4>
+                <div class="small" id="bridgeinDesc">App por assinatura publicado em stores. React Native + Expo +
+                    Tailwind + PHP backend.</div>
+                <ul id="bridgeinBullets">
+                    <li>Geolocalização e chat em tempo real com Socket.io.</li>
+                    <li>Sistema de vagas com filtros e categorias.</li>
+                    <li>Timesheet com geração de PDF para controle de tarefas.</li>
+                    <li>Painel administrativo web e arquitetura preparada para escala.</li>
+                </ul>
+            </div>
 
-      <div class="item proj">
-        <h4>Ja Chegou App <span id="mobilityTitle">(Mobilidade Urbana)</span></h4>
-        <div class="small" id="mobilityDesc">App em fase de testes.</div>
-        <ul id="mobilityBullets">
-          <li>Frontend React e backend Laravel + Filament.</li>
-          <li>Conexão usuário-motorista (matching) e estrutura inspirada em mobilidade sob demanda.</li>
-          <li>Arquitetura planejada para operação em múltiplas regiões.</li>
-        </ul>
-      </div>
+            <div class="item proj">
+                <h4><span id="incluiaTitle">Sistema Educacional Inclusivo — Incluia</span></h4>
+                <a class="link" href="https://homolog.incluia.com.br" target="_blank"
+                    rel="noreferrer">https://homolog.incluia.com.br</a>
+                <ul id="incluiaBullets">
+                    <li>Backend completo em PHP + MySQL e modelagem relacional do zero.</li>
+                    <li>Gestão documental para alunos com necessidades especiais.</li>
+                    <li>Controle de acesso por perfil e uso em ambiente educacional real.</li>
+                    <li>Arquitetura pensada para implantação em múltiplas instituições.</li>
+                </ul>
+            </div>
 
-      <div class="item proj">
-        <h4><span id="socapasTitle">SoCapas Automotivas — E-commerce</span></h4>
-        <a class="link" href="https://socapasautomotivas.com.br" target="_blank" rel="noreferrer">https://socapasautomotivas.com.br</a>
-        <ul id="socapasBullets">
-          <li>Estruturação de layout e catálogo.</li>
-          <li>Foco em UX (experiência do usuário) e conversão.</li>
-        </ul>
-      </div>
+            <div class="item proj">
+                <h4><span id="cashbackTitle">Plataforma de Cashback — Grupo Novo BH</span></h4>
+                <a class="link" href="https://homolog.gruponovobh.com.br" target="_blank"
+                    rel="noreferrer">https://homolog.gruponovobh.com.br</a>
+                <ul id="cashbackBullets">
+                    <li>Backend PHP e app em React Native.</li>
+                    <li>Pontuação em tempo real e regras de metas/condições por estabelecimento.</li>
+                    <li>Estrutura preparada para campanhas simultâneas em múltiplos parceiros.</li>
+                </ul>
+            </div>
 
-      <div class="item proj">
-        <h4><span id="relicarioTitle">Relicário DeusOT — Mini Wiki de Jogo Online</span></h4>
-        <a class="link" href="https://danwolker.github.io/relicario-deusot" target="_blank" rel="noreferrer">https://danwolker.github.io/relicario-deusot</a>
-        <ul id="relicarioBullets">
-          <li>Projeto independente para comunidade de jogo online.</li>
-          <li>HTML, CSS e JavaScript puro com arquitetura modular.</li>
-          <li>Estrutura preparada para expansão contínua de conteúdo.</li>
-        </ul>
-      </div>
-    </section>
+            <div class="item proj">
+                <h4>Ja Chegou App <span id="mobilityTitle">(Mobilidade Urbana)</span></h4>
+                <div class="small" id="mobilityDesc">App em fase de testes.</div>
+                <ul id="mobilityBullets">
+                    <li>Frontend React e backend Laravel + Filament.</li>
+                    <li>Conexão usuário-motorista (matching) e estrutura inspirada em mobilidade sob demanda.</li>
+                    <li>Arquitetura planejada para operação em múltiplas regiões.</li>
+                </ul>
+            </div>
 
-    <section class="grid" style="margin-top:14px;">
-      <div class="card">
-        <h2 class="section-title"><span class="dot"></span><span id="eduTitle">Formação</span></h2>
-        <div class="item" style="margin:0;">
-          <h3><span id="eduText">Bacharelado em Sistemas de Informação</span> <span class="meta">| <span id="eduMeta">Anhanguera — em andamento</span></span></h3>
-        </div>
-      </div>
+            <div class="item proj">
+                <h4><span id="socapasTitle">SoCapas Automotivas — E-commerce</span></h4>
+                <a class="link" href="https://socapasautomotivas.com.br" target="_blank"
+                    rel="noreferrer">https://socapasautomotivas.com.br</a>
+                <ul id="socapasBullets">
+                    <li>Estruturação de layout e catálogo.</li>
+                    <li>Foco em UX (experiência do usuário) e conversão.</li>
+                </ul>
+            </div>
 
-      <div class="card">
-        <h2 class="section-title"><span class="dot green"></span><span id="langTitle">Idiomas</span></h2>
-        <div class="item" style="margin:0;">
-          <h3><span id="langText">Inglês intermediário</span> <span class="meta">| <span id="langMeta">technical reading & documentation</span></span></h3>
-        </div>
-      </div>
-    </section>
+            <div class="item proj">
+                <h4><span id="relicarioTitle">Relicário DeusOT — Mini Wiki de Jogo Online</span></h4>
+                <a class="link" href="https://danwolker.github.io/relicario-deusot" target="_blank"
+                    rel="noreferrer">https://danwolker.github.io/relicario-deusot</a>
+                <ul id="relicarioBullets">
+                    <li>Projeto independente para comunidade de jogo online.</li>
+                    <li>HTML, CSS e JavaScript puro com arquitetura modular.</li>
+                    <li>Estrutura preparada para expansão contínua de conteúdo.</li>
+                </ul>
+            </div>
+        </section>
 
-    <footer>
-      <div id="footerText">© <span id="year"></span> Daniel Wolker • Currículo online</div>
-    </footer>
-  </main>
+        <section class="grid" style="margin-top:14px;">
+            <div class="card">
+                <h2 class="section-title"><span class="dot"></span><span id="eduTitle">Formação</span></h2>
+                <div class="item" style="margin:0;">
+                    <h3><span id="eduText">Bacharelado em Sistemas de Informação</span> <span class="meta">| <span
+                                id="eduMeta">Anhanguera — em andamento</span></span></h3>
+                </div>
+            </div>
 
-  <script>
-    const $ = (id) => document.getElementById(id);
+            <div class="card">
+                <h2 class="section-title"><span class="dot green"></span><span id="langTitle">Idiomas</span></h2>
+                <div class="item" style="margin:0;">
+                    <h3><span id="langText">Inglês intermediário</span> <span class="meta">| <span
+                                id="langMeta">technical reading & documentation</span></span></h3>
+                </div>
+            </div>
+        </section>
 
-    const i18n = {
-      pt: {
-        htmlLang: "pt-BR",
-        title: "Daniel Wolker — Currículo",
-        pill: 'Versão online • <span class="kbd">Ctrl</span> + <span class="kbd">P</span> para salvar em PDF',
-        btnLang: "English",
-        btnPrint: "Imprimir / PDF",
-        role: "Desenvolvedor Full Stack | Web | Mobile (React Native)",
-        summary: `Desenvolvedor Full Stack com experiência em aplicações web e mobile, atuando no ciclo completo: modelagem de banco de dados,
+        <footer>
+            <div id="footerText">© <span id="year"></span> Daniel Wolker • Currículo online</div>
+        </footer>
+    </main>
+
+    <script>
+        const $ = (id) => document.getElementById(id);
+
+        const i18n = {
+            pt: {
+                htmlLang: "pt-BR",
+                title: "Daniel Wolker — Currículo",
+                pill: 'Versão online • <span class="kbd">Ctrl</span> + <span class="kbd">P</span> para salvar em PDF',
+                btnLang: "English",
+                btnPrint: "Imprimir / PDF",
+                role: "Desenvolvedor Full Stack | Web | Mobile (React Native)",
+                summary: `Desenvolvedor Full Stack com experiência em aplicações web e mobile, atuando no ciclo completo: modelagem de banco de dados,
             backend, APIs e interfaces. Experiência em marketplaces, SaaS, sistemas educacionais e plataformas de cashback.
             Forte em RESTful APIs, arquitetura modular, arquitetura escalável e RBAC (controle de acesso por perfil).
             Perfil orientado a produto, performance e usabilidade. Uso de ferramentas de IA para produtividade em debugging,
             code assistance e prototipação, mantendo domínio técnico das soluções.`,
-        lblEmail: "Email",
-        lblPhone: "Telefone",
-        coreSkillsTitle: "Core Skills",
-        techTitle: "Tecnologias",
-        techText: `<b>Frontend / Mobile:</b> React Native • Expo • JavaScript (ES6+) • TypeScript • Tailwind CSS • HTML • CSS • jQuery<br/>
+                lblEmail: "Email",
+                lblPhone: "Telefone",
+                coreSkillsTitle: "Core Skills",
+                techTitle: "Tecnologias",
+                techText: `<b>Frontend / Mobile:</b> React Native • Expo • JavaScript (ES6+) • TypeScript • Tailwind CSS • HTML • CSS • jQuery<br/>
           <b>Backend:</b> PHP • Laravel • RESTful APIs • Desenvolvimento de APIs • Regras de negócio<br/>
           <b>Banco de Dados:</b> MySQL • Modelagem relacional<br/>
           <b>Ferramentas:</b> Git • GitLab • Code review • Debugging • Deploy`,
-        fullStackTitle: "Competências Full Stack",
-        expTitle: "Experiência",
-        tabinfoRole: "Desenvolvedor Full Stack",
-        present: "Atual",
-        tabinfoMeta: "Desenvolvimento de soluções web e mobile para múltiplos clientes e segmentos (educação, RH, marketplaces e e-commerce).",
-        tabinfoBullets: [
-          "Backend em PHP + MySQL e desenvolvimento de APIs REST.",
-          "Apps em React Native + Expo com foco em usabilidade e estabilidade.",
-          "Implementação de regras de negócio customizadas e RBAC (controle de acesso por funções).",
-          "Code review e mentoria técnica para outros desenvolvedores.",
-          "Manutenção e evolução de sistemas em produção com foco em escalabilidade e performance."
-        ],
-        becaRole: "Desenvolvedor Frontend/Mobile",
-        becaBullets: [
-          "Desenvolvimento mobile em React Native.",
-          "Consumo de APIs REST e integração com fluxos do app.",
-          "Melhorias de responsividade e componentização.",
-          "Correções de bugs e melhorias de estabilidade do aplicativo."
-        ],
-        projectsTitle: "Projetos Relevantes",
-        bridgeinTitle: "Marketplace de Serviços (produto internacional para o mercado canadense)",
-        bridgeinDesc: "App por assinatura publicado em stores. React Native + Expo + Tailwind + PHP backend.",
-        bridgeinBullets: [
-          "Geolocalização e chat em tempo real com Socket.io.",
-          "Sistema de vagas com filtros e categorias.",
-          "Timesheet com geração de PDF para controle de tarefas.",
-          "Painel administrativo web e arquitetura preparada para escala."
-        ],
-        incluiaTitle: "Sistema Educacional Inclusivo — Incluia",
-        incluiaBullets: [
-          "Backend completo em PHP + MySQL e modelagem relacional do zero.",
-          "Gestão documental para alunos com necessidades especiais.",
-          "Controle de acesso por perfil e uso em ambiente educacional real.",
-          "Arquitetura pensada para implantação em múltiplas instituições."
-        ],
-        cashbackTitle: "Plataforma de Cashback — Grupo Novo BH",
-        cashbackBullets: [
-          "Backend PHP e app em React Native.",
-          "Pontuação em tempo real e regras de metas/condições por estabelecimento.",
-          "Estrutura preparada para campanhas simultâneas em múltiplos parceiros."
-        ],
-        mobilityTitle: "(Mobilidade Urbana)",
-        mobilityDesc: "App em fase de testes.",
-        mobilityBullets: [
-          "Frontend React e backend Laravel + Filament.",
-          "Conexão usuário-motorista (matching) e estrutura inspirada em mobilidade sob demanda.",
-          "Arquitetura planejada para operação em múltiplas regiões."
-        ],
-        socapasTitle: "SoCapas Automotivas — E-commerce",
-        socapasBullets: [
-          "Estruturação de layout e catálogo.",
-          "Foco em UX (experiência do usuário) e conversão."
-        ],
-        relicarioTitle: "Relicário DeusOT — Mini Wiki de Jogo Online",
-        relicarioBullets: [
-          "Projeto independente para comunidade de jogo online.",
-          "HTML, CSS e JavaScript puro com arquitetura modular.",
-          "Estrutura preparada para expansão contínua de conteúdo."
-        ],
-        eduTitle: "Formação",
-        eduText: "Bacharelado em Sistemas de Informação",
-        eduMeta: "Anhanguera — em andamento",
-        langTitle: "Idiomas",
-        langText: "Inglês intermediário",
-        langMeta: "technical reading & documentation",
-        footer: "© {year} Daniel Wolker • Currículo online"
-      },
+                fullStackTitle: "Competências Full Stack",
+                expTitle: "Experiência",
+                tabinfoRole: "Desenvolvedor Full Stack",
+                present: "Atual",
+                tabinfoMeta: "Desenvolvimento de soluções web e mobile para múltiplos clientes e segmentos (educação, RH, marketplaces e e-commerce).",
+                tabinfoBullets: [
+                    "Backend em PHP + MySQL e desenvolvimento de APIs REST.",
+                    "Apps em React Native + Expo com foco em usabilidade e estabilidade.",
+                    "Implementação de regras de negócio customizadas e RBAC (controle de acesso por funções).",
+                    "Code review e mentoria técnica para outros desenvolvedores.",
+                    "Manutenção e evolução de sistemas em produção com foco em escalabilidade e performance."
+                ],
+                becaRole: "Desenvolvedor Frontend/Mobile",
+                becaBullets: [
+                    "Desenvolvimento mobile em React Native.",
+                    "Consumo de APIs REST e integração com fluxos do app.",
+                    "Melhorias de responsividade e componentização.",
+                    "Correções de bugs e melhorias de estabilidade do aplicativo."
+                ],
+                projectsTitle: "Projetos Relevantes",
+                bridgeinTitle: "Marketplace de Serviços (produto internacional para o mercado canadense)",
+                bridgeinDesc: "App por assinatura publicado em stores. React Native + Expo + Tailwind + PHP backend.",
+                bridgeinBullets: [
+                    "Geolocalização e chat em tempo real com Socket.io.",
+                    "Sistema de vagas com filtros e categorias.",
+                    "Timesheet com geração de PDF para controle de tarefas.",
+                    "Painel administrativo web e arquitetura preparada para escala."
+                ],
+                incluiaTitle: "Sistema Educacional Inclusivo — Incluia",
+                incluiaBullets: [
+                    "Backend completo em PHP + MySQL e modelagem relacional do zero.",
+                    "Gestão documental para alunos com necessidades especiais.",
+                    "Controle de acesso por perfil e uso em ambiente educacional real.",
+                    "Arquitetura pensada para implantação em múltiplas instituições."
+                ],
+                cashbackTitle: "Plataforma de Cashback — Grupo Novo BH",
+                cashbackBullets: [
+                    "Backend PHP e app em React Native.",
+                    "Pontuação em tempo real e regras de metas/condições por estabelecimento.",
+                    "Estrutura preparada para campanhas simultâneas em múltiplos parceiros."
+                ],
+                mobilityTitle: "(Mobilidade Urbana)",
+                mobilityDesc: "App em fase de testes.",
+                mobilityBullets: [
+                    "Frontend React e backend Laravel + Filament.",
+                    "Conexão usuário-motorista (matching) e estrutura inspirada em mobilidade sob demanda.",
+                    "Arquitetura planejada para operação em múltiplas regiões."
+                ],
+                socapasTitle: "SoCapas Automotivas — E-commerce",
+                socapasBullets: [
+                    "Estruturação de layout e catálogo.",
+                    "Foco em UX (experiência do usuário) e conversão."
+                ],
+                relicarioTitle: "Relicário DeusOT — Mini Wiki de Jogo Online",
+                relicarioBullets: [
+                    "Projeto independente para comunidade de jogo online.",
+                    "HTML, CSS e JavaScript puro com arquitetura modular.",
+                    "Estrutura preparada para expansão contínua de conteúdo."
+                ],
+                eduTitle: "Formação",
+                eduText: "Bacharelado em Sistemas de Informação",
+                eduMeta: "Anhanguera — em andamento",
+                langTitle: "Idiomas",
+                langText: "Inglês intermediário",
+                langMeta: "technical reading & documentation",
+                footer: "© {year} Daniel Wolker • Currículo online"
+            },
 
-      en: {
-        htmlLang: "en",
-        title: "Daniel Wolker — Resume",
-        pill: 'Online version • <span class="kbd">Ctrl</span> + <span class="kbd">P</span> to save as PDF',
-        btnLang: "Português",
-        btnPrint: "Print / PDF",
-        role: "Full Stack Developer | Web | Mobile (React Native)",
-        summary: `Full Stack Developer with experience building web and mobile applications across the full lifecycle: database modeling,
+            en: {
+                htmlLang: "en",
+                title: "Daniel Wolker — Resume",
+                pill: 'Online version • <span class="kbd">Ctrl</span> + <span class="kbd">P</span> to save as PDF',
+                btnLang: "Português",
+                btnPrint: "Print / PDF",
+                role: "Full Stack Developer | Web | Mobile (React Native)",
+                summary: `Full Stack Developer with experience building web and mobile applications across the full lifecycle: database modeling,
             backend, APIs, and interfaces. Background in marketplaces, SaaS, education platforms, and cashback/loyalty systems.
             Strong in RESTful APIs, modular and scalable architecture, and RBAC (role-based access control).
             Product-minded, performance-focused, and usability-driven. Uses AI tools to boost productivity in debugging,
             code assistance, and prototyping while maintaining full technical ownership of solutions.`,
-        lblEmail: "Email",
-        lblPhone: "Phone",
-        coreSkillsTitle: "Core Skills",
-        techTitle: "Technologies",
-        techText: `<b>Frontend / Mobile:</b> React Native • Expo • JavaScript (ES6+) • TypeScript • Tailwind CSS • HTML • CSS • jQuery<br/>
+                lblEmail: "Email",
+                lblPhone: "Phone",
+                coreSkillsTitle: "Core Skills",
+                techTitle: "Technologies",
+                techText: `<b>Frontend / Mobile:</b> React Native • Expo • JavaScript (ES6+) • TypeScript • Tailwind CSS • HTML • CSS • jQuery<br/>
           <b>Backend:</b> PHP • Laravel • RESTful APIs • API development • Business logic<br/>
           <b>Database:</b> MySQL • Relational modeling<br/>
           <b>Tools:</b> Git • GitLab • Code review • Debugging • Deploy`,
-        fullStackTitle: "Full Stack Competencies",
-        expTitle: "Experience",
-        tabinfoRole: "Full Stack Developer",
-        present: "Present",
-        tabinfoMeta: "Building web and mobile solutions for multiple clients across different segments (education, HR, marketplaces, and e-commerce).",
-        tabinfoBullets: [
-          "Backend with PHP + MySQL and REST API development.",
-          "React Native + Expo apps with a focus on usability and stability.",
-          "Custom business rules and RBAC (role-based access control).",
-          "Code review and technical mentoring for other developers.",
-          "Maintaining and evolving production systems with scalability and performance in mind."
-        ],
-        becaRole: "Frontend/Mobile Developer",
-        becaBullets: [
-          "Mobile development in React Native.",
-          "REST API consumption and integration into app flows.",
-          "Responsiveness improvements and component refactoring.",
-          "Bug fixes and overall app stability improvements."
-        ],
-        projectsTitle: "Highlighted Projects",
-        bridgeinTitle: "Services Marketplace (international product for the Canadian market)",
-        bridgeinDesc: "Subscription app published in stores. React Native + Expo + Tailwind + PHP backend.",
-        bridgeinBullets: [
-          "Geolocation and real-time chat with Socket.io.",
-          "Job system with filters and categories.",
-          "Timesheet with PDF generation for task tracking.",
-          "Web admin panel and architecture prepared for scale."
-        ],
-        incluiaTitle: "Inclusive Education Platform — Incluia",
-        incluiaBullets: [
-          "Full backend in PHP + MySQL with database designed from scratch.",
-          "Document management for students with special needs.",
-          "Role-based access control and real-world education usage.",
-          "Architecture designed for rollout across multiple institutions."
-        ],
-        cashbackTitle: "Cashback Platform — Grupo Novo BH",
-        cashbackBullets: [
-          "PHP backend and React Native app.",
-          "Real-time scoring and rules for goals/conditions per partner business.",
-          "Structure prepared for simultaneous campaigns across multiple partners."
-        ],
-        mobilityTitle: "(Urban Mobility)",
-        mobilityDesc: "App currently in testing.",
-        mobilityBullets: [
-          "React frontend and Laravel + Filament backend.",
-          "User-driver matching and on-demand mobility-inspired structure.",
-          "Architecture planned for operation across multiple regions."
-        ],
-        socapasTitle: "SoCapas Automotivas — E-commerce",
-        socapasBullets: [
-          "Layout and catalog structure implementation.",
-          "Focus on UX (user experience) and conversion."
-        ],
-        relicarioTitle: "Relicário DeusOT — Online Game Mini Wiki",
-        relicarioBullets: [
-          "Independent project for an online gaming community.",
-          "Vanilla HTML, CSS, and JavaScript with modular architecture.",
-          "Structure prepared for continuous content expansion."
-        ],
-        eduTitle: "Education",
-        eduText: "B.S. in Information Systems",
-        eduMeta: "Anhanguera — in progress",
-        langTitle: "Languages",
-        langText: "Intermediate English",
-        langMeta: "technical reading & documentation",
-        footer: "© {year} Daniel Wolker • Online resume"
-      }
-    };
+                fullStackTitle: "Full Stack Competencies",
+                expTitle: "Experience",
+                tabinfoRole: "Full Stack Developer",
+                present: "Present",
+                tabinfoMeta: "Building web and mobile solutions for multiple clients across different segments (education, HR, marketplaces, and e-commerce).",
+                tabinfoBullets: [
+                    "Backend with PHP + MySQL and REST API development.",
+                    "React Native + Expo apps with a focus on usability and stability.",
+                    "Custom business rules and RBAC (role-based access control).",
+                    "Code review and technical mentoring for other developers.",
+                    "Maintaining and evolving production systems with scalability and performance in mind."
+                ],
+                becaRole: "Frontend/Mobile Developer",
+                becaBullets: [
+                    "Mobile development in React Native.",
+                    "REST API consumption and integration into app flows.",
+                    "Responsiveness improvements and component refactoring.",
+                    "Bug fixes and overall app stability improvements."
+                ],
+                projectsTitle: "Highlighted Projects",
+                bridgeinTitle: "Services Marketplace (international product for the Canadian market)",
+                bridgeinDesc: "Subscription app published in stores. React Native + Expo + Tailwind + PHP backend.",
+                bridgeinBullets: [
+                    "Geolocation and real-time chat with Socket.io.",
+                    "Job system with filters and categories.",
+                    "Timesheet with PDF generation for task tracking.",
+                    "Web admin panel and architecture prepared for scale."
+                ],
+                incluiaTitle: "Inclusive Education Platform — Incluia",
+                incluiaBullets: [
+                    "Full backend in PHP + MySQL with database designed from scratch.",
+                    "Document management for students with special needs.",
+                    "Role-based access control and real-world education usage.",
+                    "Architecture designed for rollout across multiple institutions."
+                ],
+                cashbackTitle: "Cashback Platform — Grupo Novo BH",
+                cashbackBullets: [
+                    "PHP backend and React Native app.",
+                    "Real-time scoring and rules for goals/conditions per partner business.",
+                    "Structure prepared for simultaneous campaigns across multiple partners."
+                ],
+                mobilityTitle: "(Urban Mobility)",
+                mobilityDesc: "App currently in testing.",
+                mobilityBullets: [
+                    "React frontend and Laravel + Filament backend.",
+                    "User-driver matching and on-demand mobility-inspired structure.",
+                    "Architecture planned for operation across multiple regions."
+                ],
+                socapasTitle: "SoCapas Automotivas — E-commerce",
+                socapasBullets: [
+                    "Layout and catalog structure implementation.",
+                    "Focus on UX (user experience) and conversion."
+                ],
+                relicarioTitle: "Relicário DeusOT — Online Game Mini Wiki",
+                relicarioBullets: [
+                    "Independent project for an online gaming community.",
+                    "Vanilla HTML, CSS, and JavaScript with modular architecture.",
+                    "Structure prepared for continuous content expansion."
+                ],
+                eduTitle: "Education",
+                eduText: "B.S. in Information Systems",
+                eduMeta: "Anhanguera — in progress",
+                langTitle: "Languages",
+                langText: "Intermediate English",
+                langMeta: "technical reading & documentation",
+                footer: "© {year} Daniel Wolker • Online resume"
+            }
+        };
 
-    function setList(listId, items){
-      const ul = $(listId);
-      if (!ul) return;
-      ul.innerHTML = items.map(t => `<li>${t}</li>`).join("");
-    }
+        function setList(listId, items) {
+            const ul = $(listId);
+            if (!ul) return;
+            ul.innerHTML = items.map(t => `<li>${t}</li>`).join("");
+        }
 
-    function applyLang(lang){
-      const dict = i18n[lang];
-      document.documentElement.lang = dict.htmlLang;
-      document.documentElement.setAttribute("data-lang", lang);
+        function applyLang(lang) {
+            const dict = i18n[lang];
+            document.documentElement.lang = dict.htmlLang;
+            document.documentElement.setAttribute("data-lang", lang);
 
-      document.title = dict.title;
+            document.title = dict.title;
 
-      $("pillText").innerHTML = dict.pill;
-      $("langBtn").textContent = dict.btnLang;
-      $("printBtn").textContent = dict.btnPrint;
+            $("pillText").innerHTML = dict.pill;
+            $("langBtn").textContent = dict.btnLang;
+            $("printBtn").textContent = dict.btnPrint;
 
-      $("roleText").textContent = dict.role;
-      $("summaryText").textContent = dict.summary;
+            $("roleText").textContent = dict.role;
+            $("summaryText").textContent = dict.summary;
 
-      $("lblEmail").textContent = dict.lblEmail;
-      $("lblPhone").textContent = dict.lblPhone;
+            $("lblEmail").textContent = dict.lblEmail;
+            $("lblPhone").textContent = dict.lblPhone;
 
-      $("coreSkillsTitle").textContent = dict.coreSkillsTitle;
+            $("coreSkillsTitle").textContent = dict.coreSkillsTitle;
 
-      $("techTitle").textContent = dict.techTitle;
-      $("techText").innerHTML = dict.techText;
+            $("techTitle").textContent = dict.techTitle;
+            $("techText").innerHTML = dict.techText;
 
-      $("fullStackTitle").textContent = dict.fullStackTitle;
+            $("fullStackTitle").textContent = dict.fullStackTitle;
 
-      $("expTitle").textContent = dict.expTitle;
-      $("tabinfoRole").textContent = dict.tabinfoRole;
-      $("presentText").textContent = dict.present;
-      $("tabinfoMeta").textContent = dict.tabinfoMeta;
-      setList("tabinfoBullets", dict.tabinfoBullets);
+            $("expTitle").textContent = dict.expTitle;
+            $("tabinfoRole").textContent = dict.tabinfoRole;
+            $("presentText").textContent = dict.present;
+            $("tabinfoMeta").textContent = dict.tabinfoMeta;
+            setList("tabinfoBullets", dict.tabinfoBullets);
 
-      $("becaRole").textContent = dict.becaRole;
-      setList("becaBullets", dict.becaBullets);
+            $("becaRole").textContent = dict.becaRole;
+            setList("becaBullets", dict.becaBullets);
 
-      $("projectsTitle").textContent = dict.projectsTitle;
+            $("projectsTitle").textContent = dict.projectsTitle;
 
-      $("bridgeinTitle").textContent = dict.bridgeinTitle;
-      $("bridgeinDesc").textContent = dict.bridgeinDesc;
-      setList("bridgeinBullets", dict.bridgeinBullets);
+            $("bridgeinTitle").textContent = dict.bridgeinTitle;
+            $("bridgeinDesc").textContent = dict.bridgeinDesc;
+            setList("bridgeinBullets", dict.bridgeinBullets);
 
-      $("incluiaTitle").textContent = dict.incluiaTitle;
-      setList("incluiaBullets", dict.incluiaBullets);
+            $("incluiaTitle").textContent = dict.incluiaTitle;
+            setList("incluiaBullets", dict.incluiaBullets);
 
-      $("cashbackTitle").textContent = dict.cashbackTitle;
-      setList("cashbackBullets", dict.cashbackBullets);
+            $("cashbackTitle").textContent = dict.cashbackTitle;
+            setList("cashbackBullets", dict.cashbackBullets);
 
-      $("mobilityTitle").textContent = dict.mobilityTitle;
-      $("mobilityDesc").textContent = dict.mobilityDesc;
-      setList("mobilityBullets", dict.mobilityBullets);
+            $("mobilityTitle").textContent = dict.mobilityTitle;
+            $("mobilityDesc").textContent = dict.mobilityDesc;
+            setList("mobilityBullets", dict.mobilityBullets);
 
-      $("socapasTitle").textContent = dict.socapasTitle;
-      setList("socapasBullets", dict.socapasBullets);
+            $("socapasTitle").textContent = dict.socapasTitle;
+            setList("socapasBullets", dict.socapasBullets);
 
-      $("relicarioTitle").textContent = dict.relicarioTitle;
-      setList("relicarioBullets", dict.relicarioBullets);
+            $("relicarioTitle").textContent = dict.relicarioTitle;
+            setList("relicarioBullets", dict.relicarioBullets);
 
-      $("eduTitle").textContent = dict.eduTitle;
-      $("eduText").textContent = dict.eduText;
-      $("eduMeta").textContent = dict.eduMeta;
+            $("eduTitle").textContent = dict.eduTitle;
+            $("eduText").textContent = dict.eduText;
+            $("eduMeta").textContent = dict.eduMeta;
 
-      $("langTitle").textContent = dict.langTitle;
-      $("langText").textContent = dict.langText;
-      $("langMeta").textContent = dict.langMeta;
+            $("langTitle").textContent = dict.langTitle;
+            $("langText").textContent = dict.langText;
+            $("langMeta").textContent = dict.langMeta;
 
-      const year = new Date().getFullYear();
-      $("footerText").textContent = dict.footer.replace("{year}", year);
-    }
+            const year = new Date().getFullYear();
+            $("footerText").textContent = dict.footer.replace("{year}", year);
+        }
 
-    // init
-    const year = new Date().getFullYear();
-    $("year").textContent = year;
+        // init
+        const year = new Date().getFullYear();
+        $("year").textContent = year;
 
-    $("printBtn").addEventListener("click", () => window.print());
+        $("printBtn").addEventListener("click", () => window.print());
 
-    $("langBtn").addEventListener("click", () => {
-      const current = document.documentElement.getAttribute("data-lang") || "pt";
-      const next = current === "pt" ? "en" : "pt";
-      applyLang(next);
-    });
+        $("langBtn").addEventListener("click", () => {
+            const current = document.documentElement.getAttribute("data-lang") || "pt";
+            const next = current === "pt" ? "en" : "pt";
+            applyLang(next);
+        });
 
-    applyLang("pt");
-  </script>
+        applyLang("pt");
+    </script>
 </body>
+
 </html>
